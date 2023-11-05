@@ -14,9 +14,7 @@ const postrouter = require("./routes/post");
 //// ---------------------------------------- middleware
 app.use(express.json());      
 app.use(cookieParser());
-app.use(cors({
-    origin:["https://widepost.onrender.com/"]
-}));
+app.use(cors());
 app.use(function(req,res,next){
     res.header("Access-Control-Allow-Origin", "https://widepost.onrender.com/");
     res.header(
